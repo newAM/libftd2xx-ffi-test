@@ -1,0 +1,18 @@
+[package]
+name = "libftd2xx-ffi-test"
+version = "0.1.0"
+authors = ["Alex M. <alexmgit@protonmail.com>"]
+edition = "2018"
+
+[dependencies]
+
+
+[target.'cfg(target_os = "windows")'.dependencies.libftd2xx-ffi]
+git = "https://github.com/Grinkers/libftd2xx-ffi-rs.git"
+branch = "main"
+features = []
+
+[target.'cfg(target_os = "linux")'.dependencies.libftd2xx-ffi]
+git = "https://github.com/Grinkers/libftd2xx-ffi-rs.git"
+branch = "main"
+features = ["static"]
